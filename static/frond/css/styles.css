@@ -1,0 +1,192 @@
+:root {
+    --primary-black: #1a1a1a;
+    --secondary-black: #2d2d2d;
+    --text-white: #ffffff;
+    --accent-color: #3a3a3a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--primary-black);
+    color: var(--text-white);
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--secondary-black);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-items {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-items a {
+    color: var(--text-white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-items a:hover {
+    color: #888;
+}
+
+/* Language Dropdown */
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: var(--accent-color);
+    color: var(--text-white);
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary-black);
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--text-white);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.language-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 2rem auto;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    flex: 0 0 30%;
+    background-color: var(--secondary-black);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.weather-section, .prayer-times {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.temperature {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+.city {
+    color: #888;
+}
+
+.prayer-time {
+    margin: 0.5rem 0;
+}
+
+.notes {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    background-color: var(--secondary-black);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.about-section, .social-links, .skills-section {
+    margin-bottom: 2rem;
+    
+}
+
+.about-section {
+    text-align: center;
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    background-color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    color: var(--text-white);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: var(--primary-black);
+}
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background-color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+

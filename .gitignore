@@ -1,0 +1,35 @@
+# Python fayllari
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual environment
+env/
+venv/
+.venv/
+
+# Django o'zgarmas fayllari
+db.sqlite3
+*.log
+
+# Static va media fayllar
+
+# Mig'ratsiya zaxira fayllari
+*.swp
+*.swo
+*.bak
+*.backup
+
+# IDE yoki editor fayllari
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Operating system fayllari
+.DS_Store
+Thumbs.db
+
+# Config fayllari
+.env
+*.env

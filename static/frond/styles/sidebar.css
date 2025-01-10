@@ -1,0 +1,43 @@
+/* Sidebar specific styles */
+.sidebar {
+    flex: 0 0 30%;
+    background-color: var(--secondary-black);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.weather-section, .prayer-times {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.temperature {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+}
+
+.city {
+    color: #888;
+}
+
+.prayer-time {
+    margin: 0.5rem 0;
+}
+
+.notes {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Mobile sidebar */
+@media (max-width: 768px) {
+    .sidebar {
+        flex: 1;
+        margin-bottom: 1rem;
+    }
+
+    .temperature {
+        font-size: 1.5rem;
+    }
+}

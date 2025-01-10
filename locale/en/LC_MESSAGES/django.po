@@ -1,0 +1,119 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-02 04:07+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\index.html:24
+msgid " Blog "
+msgstr "Blog"
+
+#: .\templates\index.html:25
+msgid " Video "
+msgstr "Video"
+
+#: .\templates\index.html:26
+msgid " Music "
+msgstr "Music"
+
+#: .\templates\index.html:63
+msgid " Weather! "
+msgstr "Weather"
+
+#: .\templates\index.html:67
+msgid "Tong"
+msgstr "Morning"
+
+#: .\templates\index.html:67
+msgid "Kun"
+msgstr "Day"
+
+#: .\templates\index.html:67
+msgid "Oqshom"
+msgstr "Evening"
+
+#: .\templates\index.html:70
+msgid "Namlik"
+msgstr "Moisture"
+
+#: .\templates\index.html:71
+msgid "Bosim"
+msgstr "Pressure"
+
+#: .\templates\index.html:72
+msgid "Quyosh chiqishi"
+msgstr "Sunrise"
+
+#: .\templates\index.html:73
+msgid "Quyosh botishi"
+msgstr "Sunset"
+
+#: .\templates\index.html:78
+msgid " Prayer Times "
+msgstr "Prayer Times"
+
+#: .\templates\index.html:78
+msgid " Toshkent"
+msgstr "Tashkent"
+
+#: .\templates\index.html:80
+msgid "Bomdod"
+msgstr "Fajr"
+
+#: .\templates\index.html:81
+msgid "Quyosh"
+msgstr "Sunrise"
+
+#: .\templates\index.html:82
+msgid "Peshin"
+msgstr "Dhuhr"
+
+#: .\templates\index.html:83
+msgid "Asr"
+msgstr "Asr"
+
+#: .\templates\index.html:84
+msgid "Shom"
+msgstr "Maghrib"
+
+#: .\templates\index.html:85
+msgid "Xufton"
+msgstr "Isha"
+
+#: .\templates\index.html:103
+msgid " Hello! "
+msgstr "Hello"
+
+#: .\templates\index.html:107
+msgid " Contact! "
+msgstr "Contact"
+
+#: .\templates\index.html:109
+msgid "Tel"
+msgstr "Phone"
+
+#: .\templates\index.html:110
+msgid "Email"
+msgstr "Email"
+
+#: .\templates\index.html:111
+msgid "Addres"
+msgstr "Addres"
+
+#: .\templates\index.html:123
+msgid " Skills! "
+msgstr "Skills"
