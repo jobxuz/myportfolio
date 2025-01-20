@@ -1,7 +1,7 @@
 /* Navbar specific styles */
 .navbar {
     background-color: var(--secondary-black);
-    padding: 1px 0;
+    padding: 5px 0;
     position: sticky;
     top: 0;
     z-index: 100;
