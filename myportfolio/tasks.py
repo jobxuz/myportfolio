@@ -3,11 +3,6 @@ from .weather import fetch_weather_data
 from .prayer_time import nomozdata
 
 
-@shared_task
-def print_hello_world():
-    print("Salom Dunyo!")
-
-
 
 
 @shared_task

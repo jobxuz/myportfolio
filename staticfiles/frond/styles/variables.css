@@ -1,0 +1,12 @@
+/* Global CSS variables */
+:root {
+    --primary-black: #1a1a1a;
+    --secondary-black: #2d2d2d;
+    --text-white: #ffffff;
+    --accent-color: #3a3a3a;
+    --container-width: 1200px;
+    --border-radius: 8px;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+}

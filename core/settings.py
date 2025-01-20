@@ -32,9 +32,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-90a5pfy4uj-x!6sovr#v(7*%)k6#4!(_w(ms8d+h#$$w8)g919'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['khurbonov.uz','www.khurbonov.uz']
 
 
 # Application definition
@@ -142,18 +142,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-#STATIC_URL = 'static/'
+STATIC_URL = 'static/'
 
-# STATICFILES_DIRS = [
-#      (BASE_DIR/'static')
-#  ]
+STATICFILES_DIRS = [
+      (BASE_DIR/'static')
+  ]
 
 
-STATIC_URL = "static/"
-STATIC_ROOT = BASE_DIR / "static"
-STATICFILES_DIRS = (BASE_DIR / "staticfiles",)
+#STATIC_URL = "static/"
+#STATIC_ROOT = BASE_DIR / "static"
+#STATICFILES_DIRS = (BASE_DIR / "staticfiles",)
 
-#STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 
@@ -194,13 +194,9 @@ from celery.schedules import crontab
 
 # Celery beat sozlamalari
 CELERY_BEAT_SCHEDULE = {
-    'say-hello-world': {
-        'task': 'myportfolio.tasks.print_hello_world',
-        'schedule': 60.0,  # har 1 daqiqada
-    },
     'say-wether': {
         'task': 'myportfolio.tasks.weather_task',
-        'schedule': 60.0,  # har 1 soatda
+        'schedule': 3600.0,  # har 1 soatda
     },
     'say-prayer': {
         'task': 'myportfolio.tasks.prayer_task',

@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>.</title>
     {% load static %}
     {% load i18n %}
 
@@ -21,7 +21,7 @@
         <div class="nav-content">
             <div class="logo">Temur</div>
             <div class="nav-items">
-                <a href="#">{% blocktrans %} Blog {% endblocktrans %}</a>
+                <!-- <a href="#">{% blocktrans %} Blog {% endblocktrans %}</a> -->
                 <!-- <a href="#">{% blocktrans %} Video {% endblocktrans %}</a>
                 <a href="#">{% blocktrans %} Music {% endblocktrans %}</a> -->
                 <div class="language-dropdown">
@@ -77,12 +77,12 @@
             <div class="prayer-times">
                 <h2>{% blocktrans %} Prayer Times {% endblocktrans %} | {% blocktrans %} Toshkent{% endblocktrans %}</h2>
                 <div class="times">
-                    <div class="prayer-time">{% blocktrans %}Bomdod{% endblocktrans %}: {{ prayer.bomdod }}</div>
-                    <div class="prayer-time">{% blocktrans %}Quyosh{% endblocktrans %}: {{ prayer.quyosh }}</div>
-                    <div class="prayer-time">{% blocktrans %}Peshin{% endblocktrans %}: {{ prayer.peshin }}</div>
-                    <div class="prayer-time">{% blocktrans %}Asr{% endblocktrans %}: {{ prayer.asr }}</div>
-                    <div class="prayer-time">{% blocktrans %}Shom{% endblocktrans %}: {{ prayer.shom }}</div>
-                    <div class="prayer-time">{% blocktrans %}Xufton{% endblocktrans %}: {{ prayer.xufton }}</div>
+                    <div class="prayer-time">{% blocktrans %}Bomdod{% endblocktrans %}: <span>{{ prayer.bomdod }}</span></div>
+                    <div class="prayer-time">{% blocktrans %}Quyosh{% endblocktrans %}: <span>{{ prayer.quyosh }}</span></div>
+                    <div class="prayer-time">{% blocktrans %}Peshin{% endblocktrans %}: <span>{{ prayer.peshin }}</span></div>
+                    <div class="prayer-time">{% blocktrans %}Asr{% endblocktrans %}: <span>{{ prayer.asr }}</span></div>
+                    <div class="prayer-time">{% blocktrans %}Shom{% endblocktrans %}: <span>{{ prayer.shom }}</span></div>
+                    <div class="prayer-time">{% blocktrans %}Xufton{% endblocktrans %}: <span>{{ prayer.xufton }}</span></div>
                 </div>
             </div>
 
