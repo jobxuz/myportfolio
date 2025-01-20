@@ -37,6 +37,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['khurbonov.uz','www.khurbonov.uz']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [

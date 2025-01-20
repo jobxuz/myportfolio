@@ -1,11 +1,17 @@
 /* Navbar specific styles */
 .navbar {
     background-color: var(--secondary-black);
-    padding: 1rem 0;
-    position: inherit;
+    padding: 1px 0;
+    position: sticky;
     top: 0;
     z-index: 100;
 }
+
+
+#navIcon {
+    display: none;
+  }
+
 
 .nav-content {
     max-width: 1200px;
@@ -81,12 +87,34 @@
         padding: 1rem;
     }
 
+    .nav-box {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+    #navIcon {
+        display: inline-block;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
     .nav-items {
         flex-direction: column;
         width: 100%;
         gap: 1rem;
         align-items: center;
-    }
+        /* add */
+        display: none; /* Default yashirin */
+        /* add */
+      }
+      /*  qoshish kerak bolgan narsa */
+      .show {
+        display: flex; /* Klass qo‘shilganda ko‘rinadi */
+      }
+      /*  qoshish kerak bolgan narsa */
+    
 
     .language-dropdown {
         width: 100%;

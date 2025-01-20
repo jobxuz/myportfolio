@@ -25,3 +25,13 @@ document.querySelectorAll('.dropdown-content a').forEach(link => {
         // Here you can add logic to change the language
     });
 });
+
+
+// ----------------------------
+let navItem = document.getElementById("navItem");
+let navIcon = document.getElementById("navIcon");
+
+navIcon.addEventListener("click", function () {
+  navItem.classList.toggle("show"); 
+});
+// -----------------------------

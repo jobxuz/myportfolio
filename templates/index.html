@@ -15,15 +15,20 @@
     <link rel="stylesheet" href="{% static 'frond/styles/navbar.css'%}">
     <link rel="stylesheet" href="{% static 'frond/styles/sidebar.css'%}">
     <link rel="stylesheet" href="{% static 'frond/styles/main-content.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-content">
-            <div class="logo">Temur</div>
-            <div class="nav-items">
-                <!-- <a href="#">{% blocktrans %} Blog {% endblocktrans %}</a> -->
+            <div class="nav-box">
+                <div class="logo">Temur</div>
+                <i class="fa-solid fa-bars" id="navIcon"></i> <!-- Icon uchun ID -->
+              </div>
+
+            <div class="nav-items" id="navItem">
+                <a href="#">{% blocktrans %} Blog {% endblocktrans %}</a>
                 <!-- <a href="#">{% blocktrans %} Video {% endblocktrans %}</a>
-                <a href="#">{% blocktrans %} Music {% endblocktrans %}</a> -->
+                <a href="#">{% blocktrans %} Music {% endblocktrans %}</a>  -->
                 <div class="language-dropdown">
                     <button class="dropbtn">
                         {% get_current_language as LANGUAGE_CODE %}
@@ -86,9 +91,9 @@
                 </div>
             </div>
 
-            <div class="notes">
+            <!-- <div class="notes">
                 <p>...</p>
-            </div>
+            </div> -->
         </aside>
 
         <main class="main-content">
@@ -145,6 +150,7 @@
 
     
     <script type="module" src="{% static 'frond/js/main.js'%}"></script>
+    <script src="{% static 'frond/script.js'%}"></script>
 
 </body>
 
