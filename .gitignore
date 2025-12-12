@@ -33,3 +33,8 @@ Thumbs.db
 # Config fayllari
 .env
 *.env
+
+
+media/
+media
+/media
