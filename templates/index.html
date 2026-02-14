@@ -49,18 +49,42 @@
                     
                 </div>
                 
-                
-                <!-- <div class="language-dropdown">
-                    <button class="dropbtn">Language</button>
-                    <div class="dropdown-content">
-                        <a href="#" data-lang="en">en</a>
-                        <a href="#" data-lang="es">ru</a>
-                        <a href="#" data-lang="tr">uz</a>
-                    </div>
-                </div> -->
             </div>
         </div>
     </nav>
+
+    <div class="ramadan-sidebar">
+        <h2>🌙 Ramazon kundaligi</h2>
+
+        <div class="ramadan-region-select">
+            <form method="get">
+                <select name="region" onchange="this.form.submit()">
+                    {% for r in regions %}
+                        <option value="{{ r.id }}"
+                            {% if r.id == selected_region.id %}selected{% endif %}>
+                            {{ r.name }}
+                        </option>
+                    {% endfor %}
+                </select>
+            </form>
+        </div>
+
+        <div class="ramadan-list">
+            {% for day in ramadan_days %}
+            <div class="ramadan-item {% if day.date == today %}active-ramadan{% endif %}">
+                <div class="ramadan-top">
+                    <span class="ramadan-day">{{ day.day }}-kun</span>
+                    <span class="ramadan-date">{{ day.date }}</span>
+                </div>
+                <div class="ramadan-times">
+                    🌅 {{ day.saharlik }} | 🌇 {{ day.iftorlik }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
 
     <div class="container">
         <aside class="sidebar">

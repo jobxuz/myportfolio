@@ -190,3 +190,65 @@ body {
     font-size: 0.9rem;
 }
 
+
+
+/* ===== SIDEBAR RAMAZON ===== */
+
+.ramadan-sidebar {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--accent-color);
+}
+
+.ramadan-sidebar h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #ffd369;
+    text-align: center;
+}
+
+.ramadan-region-select {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.ramadan-region-select select {
+    width: 100%;
+    padding: 0.6rem;
+    background: #3a3a3a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+.ramadan-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.ramadan-item {
+    background: #2a2a2a;
+    padding: 0.7rem;
+    border-radius: 6px;
+    margin-bottom: 0.6rem;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.ramadan-item:hover {
+    background: #333;
+}
+
+.ramadan-top {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.active-ramadan {
+    background: linear-gradient(90deg, #ffd369, #ffb347);
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 211, 105, 0.5);
+}

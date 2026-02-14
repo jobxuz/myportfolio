@@ -73,3 +73,35 @@ class Prayer(models.Model):
     
     def __str__(self):
         return f"Bomdod: {self.bomdod} | Peshin: {self.peshin} | Asr: {self.asr} | Shom: {self.shom} | Xufton: {self.xufton}"
+    
+
+
+
+
+class Region(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    slug = models.SlugField(unique=True)
+
+    def __str__(self):
+        return self.name
+
+
+
+class RamadanCalendar(models.Model):
+    region = models.ForeignKey(
+        Region,
+        on_delete=models.CASCADE,
+        related_name="ramadan_days"
+    )
+    day = models.IntegerField()
+    week_day = models.CharField(max_length=10)
+    date = models.DateField()
+    saharlik = models.TimeField()
+    iftorlik = models.TimeField()
+
+    class Meta:
+        unique_together = ("region", "day", "date")
+        ordering = ["region", "day"]
+
+    def __str__(self):
+        return f"{self.region.name} - {self.day}-kun"
