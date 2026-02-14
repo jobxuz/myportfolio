@@ -1,44 +1,163 @@
 /* Sidebar specific styles */
 .sidebar {
     flex: 0 0 30%;
-    background-color: var(--secondary-black);
+    background: linear-gradient(160deg, #252525 0%, #1e1e1e 100%);
     padding: 1.5rem;
-    border-radius: 8px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 211, 105, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
-.weather-section{
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--accent-color);
-}
-.prayer-times{
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
+/* ===== WEATHER SECTION ===== */
+.weather-section {
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
+.weather-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
 
-.temperature {
+.weather-icon {
     font-size: 2rem;
-    margin: 0.5rem 0;
 }
 
-.city {
+.weather-city {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-white);
+    margin: 0;
+}
+
+.weather-date {
+    font-size: 0.85rem;
     color: #888;
 }
 
-.prayer-time {
-    margin: 0.5rem 0;
-    /* shundan pasi qoshildi */
+.weather-temp-main {
     display: flex;
-    align-items:center;
-    justify-content:space-between;
-    border-bottom: 1px solid var(--accent-color);
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
 }
 
+.weather-temp {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-white);
+}
 
-.notes {
+.weather-temp-sub {
+    font-size: 1.25rem;
+    color: var(--accent-gold);
+}
+
+.weather-day-temps {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+}
+
+.day-temp-item {
+    flex: 1;
+    text-align: center;
+}
+
+.day-label {
+    display: block;
+    font-size: 0.75rem;
+    color: #888;
+    margin-bottom: 0.25rem;
+}
+
+.day-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent-gold);
+}
+
+.weather-desc {
+    font-size: 0.95rem;
+    color: #b0b0b0;
+    margin-bottom: 1rem;
+}
+
+.weather-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.weather-detail {
     font-size: 0.9rem;
     color: #888;
+}
+
+.weather-detail span {
+    color: #b8b8b8;
+    float: right;
+}
+
+/* ===== PRAYER TIMES ===== */
+.prayer-times {
+    margin-bottom: 0;
+}
+
+.prayer-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.prayer-icon {
+    font-size: 1.25rem;
+}
+
+.prayer-times h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-white);
+    margin: 0;
+}
+
+.prayer-times-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.prayer-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.65rem 0.85rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.prayer-item:hover {
+    background: rgba(255, 211, 105, 0.06);
+}
+
+.prayer-name {
+    font-size: 0.9rem;
+    color: #c8c8c8;
+}
+
+.prayer-time-val {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--accent-gold);
 }
 
 /* Mobile sidebar */
@@ -48,7 +167,7 @@
         margin-bottom: 1rem;
     }
 
-    .temperature {
-        font-size: 1.5rem;
+    .weather-temp {
+        font-size: 2rem;
     }
 }

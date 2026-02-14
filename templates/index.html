@@ -113,29 +113,52 @@
     <div class="container">
         <aside class="sidebar">
             <div class="weather-section">
-                <!-- <h2>{% blocktrans %} Weather! {% endblocktrans %}</h2> -->
-                 <h2>{{ weather.city }}</h2>
-                 <div class="prayer-time">{{ weather.date }}</div>
-                <div class="temperature">{{ weather.current_temp }}  {{ weather.current_temp2 }}</div>
-                <h5 style="word-spacing: 30px;">{% blocktrans %}Tong{% endblocktrans %} {% blocktrans %}Kun{% endblocktrans %} {% blocktrans %}Oqshom{% endblocktrans %}</h5>
-                <div class="city" style="word-spacing: 50px;">{{weather.morning_temp}}C {{weather.day_temp}}C {{weather.evening_temp}}C</div>
-                <div ><h4>{{ weather.desk }}</h4></div>
-                <div class="city">{% blocktrans %}Namlik{% endblocktrans %}: {{ weather.humidity }}</div>
-                <div class="city">{% blocktrans %}Bosim{% endblocktrans %}: {{ weather.pressure }}</div>
-                <div class="city">{% blocktrans %}Quyosh chiqishi{% endblocktrans %}: {{ weather.sunrise1 }}:{{ weather.sunrise2 }} </div>
-                <div class="city">{% blocktrans %}Quyosh botishi{% endblocktrans %}: {{ weather.sunset1 }}:{{ weather.sunset2 }}  </div>
-                
+                <div class="weather-header">
+                    <span class="weather-icon">🌤️</span>
+                    <div>
+                        <h2 class="weather-city">{{ weather.city }}</h2>
+                        <div class="weather-date">{{ weather.date }}</div>
+                    </div>
+                </div>
+                <div class="weather-temp-main">
+                    <span class="weather-temp">{{ weather.current_temp }}</span>
+                    <span class="weather-temp-sub">{{ weather.current_temp2 }}</span>
+                </div>
+                <div class="weather-day-temps">
+                    <div class="day-temp-item">
+                        <span class="day-label">{% blocktrans %}Tong{% endblocktrans %}</span>
+                        <span class="day-value">{{ weather.morning_temp }}°</span>
+                    </div>
+                    <div class="day-temp-item">
+                        <span class="day-label">{% blocktrans %}Kun{% endblocktrans %}</span>
+                        <span class="day-value">{{ weather.day_temp }}°</span>
+                    </div>
+                    <div class="day-temp-item">
+                        <span class="day-label">{% blocktrans %}Oqshom{% endblocktrans %}</span>
+                        <span class="day-value">{{ weather.evening_temp }}°</span>
+                    </div>
+                </div>
+                <div class="weather-desc">{{ weather.desk }}</div>
+                <div class="weather-details">
+                    <div class="weather-detail">{% blocktrans %}Namlik{% endblocktrans %}: <span>{{ weather.humidity }}</span></div>
+                    <div class="weather-detail">{% blocktrans %}Bosim{% endblocktrans %}: <span>{{ weather.pressure }}</span></div>
+                    <div class="weather-detail">{% blocktrans %}Quyosh chiqishi{% endblocktrans %}: <span>{{ weather.sunrise1 }}:{{ weather.sunrise2 }}</span></div>
+                    <div class="weather-detail">{% blocktrans %}Quyosh botishi{% endblocktrans %}: <span>{{ weather.sunset1 }}:{{ weather.sunset2 }}</span></div>
+                </div>
             </div>
             
             <div class="prayer-times">
-                <h2>{% blocktrans %} Prayer Times {% endblocktrans %} | {% blocktrans %} Toshkent{% endblocktrans %}</h2>
-                <div class="times">
-                    <div class="prayer-time">{% blocktrans %}Bomdod{% endblocktrans %}: <span>{{ prayer.bomdod }}</span></div>
-                    <div class="prayer-time">{% blocktrans %}Quyosh{% endblocktrans %}: <span>{{ prayer.quyosh }}</span></div>
-                    <div class="prayer-time">{% blocktrans %}Peshin{% endblocktrans %}: <span>{{ prayer.peshin }}</span></div>
-                    <div class="prayer-time">{% blocktrans %}Asr{% endblocktrans %}: <span>{{ prayer.asr }}</span></div>
-                    <div class="prayer-time">{% blocktrans %}Shom{% endblocktrans %}: <span>{{ prayer.shom }}</span></div>
-                    <div class="prayer-time">{% blocktrans %}Xufton{% endblocktrans %}: <span>{{ prayer.xufton }}</span></div>
+                <div class="prayer-header">
+                    <span class="prayer-icon">🕌</span>
+                    <h2>{% blocktrans %}Namoz vaqtlari{% endblocktrans %} | {% blocktrans %}Toshkent{% endblocktrans %}</h2>
+                </div>
+                <div class="prayer-times-list">
+                    <div class="prayer-item"><span class="prayer-name">{% blocktrans %}Bomdod{% endblocktrans %}</span><span class="prayer-time-val">{{ prayer.bomdod }}</span></div>
+                    <div class="prayer-item"><span class="prayer-name">{% blocktrans %}Quyosh{% endblocktrans %}</span><span class="prayer-time-val">{{ prayer.quyosh }}</span></div>
+                    <div class="prayer-item"><span class="prayer-name">{% blocktrans %}Peshin{% endblocktrans %}</span><span class="prayer-time-val">{{ prayer.peshin }}</span></div>
+                    <div class="prayer-item"><span class="prayer-name">{% blocktrans %}Asr{% endblocktrans %}</span><span class="prayer-time-val">{{ prayer.asr }}</span></div>
+                    <div class="prayer-item"><span class="prayer-name">{% blocktrans %}Shom{% endblocktrans %}</span><span class="prayer-time-val">{{ prayer.shom }}</span></div>
+                    <div class="prayer-item"><span class="prayer-name">{% blocktrans %}Xufton{% endblocktrans %}</span><span class="prayer-time-val">{{ prayer.xufton }}</span></div>
                 </div>
             </div>
 
@@ -146,33 +169,31 @@
 
         <main class="main-content">
             <div class="profile-section">
-                <div class="profile-image">
-                    <img src="{{ about.img.url }}" alt="Profile Picture">
+                <div class="profile-image-wrap">
+                    <img src="{{ about.img.url }}" alt="Profile Picture" class="profile-img">
                 </div>
                 
                 <div class="about-section">
-                    <h2>{{ about.name }}</h2>
-                    <p>{% blocktrans %}{% endblocktrans %} {{ about.deskription }}</p>
+                    <h2 class="profile-name">{{ about.name }}</h2>
+                    <p class="profile-title">{% blocktrans %}{% endblocktrans %} {{ about.deskription }}</p>
                 </div>
                 
                 <div class="social-links">
-                    <h2>{% blocktrans %} Contact! {% endblocktrans %}</h2>
-                    <div class="city">
-                        <h4>{% blocktrans %}Tel{% endblocktrans %}: {{contact.phone}}</h4>
-                        <h4>{% blocktrans %}Email{% endblocktrans %}: {{contact.email}}</h4>
-                        <h4>{% blocktrans %}Addres{% endblocktrans %}: {{contact.addres}}</h4>
+                    <h3 class="section-title">{% blocktrans %}Aloqa{% endblocktrans %}</h3>
+                    <div class="contact-list">
+                        <div class="contact-item"><i class="fa-solid fa-phone"></i><span>{% blocktrans %}Tel{% endblocktrans %}: {{contact.phone}}</span></div>
+                        <div class="contact-item"><i class="fa-solid fa-envelope"></i><span>{% blocktrans %}Email{% endblocktrans %}: {{contact.email}}</span></div>
+                        <div class="contact-item"><i class="fa-solid fa-location-dot"></i><span>{% blocktrans %}Manzil{% endblocktrans %}: {{contact.addres}}</span></div>
                     </div>
-                    
                     <div class="social-icons">
                         {% for rs in contacturl %}
                         <a href="{{ rs.contacturl }}" class="social-icon" target="_blank">{{ rs.name }}</a>
                         {% endfor %}
                     </div>
-                    
                 </div>
 
                 <div class="skills-section">
-                    <h2>{% blocktrans %} Skills! {% endblocktrans %}</h2>
+                    <h3 class="section-title">{% blocktrans %}Ko'nikmalar{% endblocktrans %}</h3>
                     <div class="skills-tags">
                         {% for rs in skills %}
                         <span class="skill-tag">{{rs.name}}</span>
