@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{% static 'frond/styles/sidebar.css'%}">
     <link rel="stylesheet" href="{% static 'frond/styles/main-content.css'%}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -53,39 +54,62 @@
         </div>
     </nav>
 
-    <div class="ramadan-sidebar">
-        <h2>🌙 Ramazon kundaligi</h2>
-
-        <div class="ramadan-region-select">
-            <form method="get">
-                <select name="region" onchange="this.form.submit()">
-                    {% for r in regions %}
-                        <option value="{{ r.id }}"
-                            {% if r.id == selected_region.id %}selected{% endif %}>
-                            {{ r.name }}
-                        </option>
-                    {% endfor %}
-                </select>
-            </form>
-        </div>
-
-        <div class="ramadan-list">
-            {% for day in ramadan_days %}
-            <div class="ramadan-item {% if day.date == today %}active-ramadan{% endif %}">
-                <div class="ramadan-top">
-                    <span class="ramadan-day">{{ day.day }}-kun</span>
+    <div class="page-wrapper">
+        <div class="ramadan-section">
+            <div class="ramadan-header">
+                <div class="ramadan-header-main">
+                    <span class="ramadan-icon">🌙</span>
+                    <h2 class="ramadan-title">Ramazon kundaligi</h2>
+                    <span class="ramadan-icon">🌙</span>
+                </div>
+                <p class="ramadan-note">2026 yil uchun. Eslatma: vaqtlar viloyat markazlari uchun olingan. | Namozvaqti.uz</p>
+            </div>
+            <div class="ramadan-region-bar">
+                <span class="ramadan-region-label">{% if selected_region %}{{ selected_region.name }}{% else %}{% blocktrans %}Viloyat tanlang{% endblocktrans %}{% endif %}</span>
+                <form method="get" class="ramadan-region-form">
+                    <select name="region" onchange="this.form.submit()" class="ramadan-select">
+                        {% for r in regions %}
+                            <option value="{{ r.id }}"
+                                {% if selected_region and r.id == selected_region.id %}selected{% endif %}>
+                                {{ r.name }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </form>
+            </div>
+            <div class="ramadan-list">
+                {% for day in ramadan_days %}
+                <div class="ramadan-item {% if day.date == today %}active-ramadan{% endif %}">
+                    <div class="ramadan-item-left">
+                        <span class="ramadan-day-num">{{ day.day }}-kun</span>
+                        <div class="ramadan-times">
+                            <span class="time-saharlik">🌅 {{ day.saharlik }}</span>
+                            <span class="time-divider">|</span>
+                            <span class="time-iftorlik">🌇 {{ day.iftorlik }}</span>
+                        </div>
+                    </div>
                     <span class="ramadan-date">{{ day.date }}</span>
                 </div>
-                <div class="ramadan-times">
-                    🌅 {{ day.saharlik }} | 🌇 {{ day.iftorlik }}
+                {% endfor %}
+            </div>
+
+            <div class="ramadan-duas">
+                <h3 class="duas-title">📿 Saharlik va Iftorlik duolari</h3>
+                <div class="dua-block dua-saharlik">
+                    <h4>🌅 Saharlik niyati</h4>
+                    <p class="dua-translit">«Navaytu an asuuma sovma shahri ramazona minal-fajri ilal-mag‘ribi, xolisan lillahi ta’aalaa. Alloh-u akbar».</p>
+                    <p class="dua-meaning">Ramazon oyining ro‘zasini tong otganidan kun botgunicha xolis Alloh taolo uchun tutishni niyat qildim. Alloh-u akbar</p>
+                </div>
+                <div class="dua-block dua-iftorlik">
+                    <h4>🌇 Iftorlik duosi</h4>
+                    <p class="dua-translit">«Allohumma laka sumtu va bika aamantu va ’alayka tavakkaltu va ’alaa rizqika aftortu, fag‘firlii yaa G‘offaru maa qoddamtu va maa axxortu, birohmatika yaa arhamar-Rohimiyn».</p>
+                    <p class="dua-meaning">“Yo Alloh, Sen uchun ro‘za tutdim. Senga iymon keltirdim, Senga tavakkal qildim. Sen bergan rizq bilan iftor qildim. Ey gunohlarni afv qiluvchi Zot, mening avvalgi va keyingi gunohlarimni mag‘firat qil.</p>
                 </div>
             </div>
-            {% endfor %}
         </div>
     </div>
 
-
-
+    <div class="page-wrapper">
     <div class="container">
         <aside class="sidebar">
             <div class="weather-section">
@@ -157,6 +181,7 @@
                 </div>
             </div>
         </main>
+    </div>
     </div>
     <script>
         document.querySelectorAll('[data-lang]').forEach(function (element) {

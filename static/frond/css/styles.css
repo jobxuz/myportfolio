@@ -190,3 +190,273 @@ body {
     font-size: 0.9rem;
 }
 
+
+
+/* ===== PAGE WRAPPER (bir xil chegara) ===== */
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.page-wrapper:first-of-type {
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.page-wrapper:last-of-type {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.page-wrapper .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+/* ===== RAMAZON TAQVIMI – chiroyli dizayn ===== */
+.ramadan-section {
+    background: linear-gradient(145deg, #252525 0%, #1e1e1e 100%);
+    border-radius: 12px;
+    padding: 1.75rem;
+    border: 1px solid rgba(255, 211, 105, 0.15);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.ramadan-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 211, 105, 0.2);
+}
+
+.ramadan-header-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.ramadan-note {
+    font-size: 0.8rem;
+    color: #888;
+    margin: 0;
+    text-align: center;
+}
+
+.ramadan-icon {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+.ramadan-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #ffd369;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.ramadan-region-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.ramadan-region-label {
+    font-size: 0.95rem;
+    color: #b0b0b0;
+    font-weight: 500;
+}
+
+.ramadan-region-form {
+    flex: 1;
+    max-width: 280px;
+}
+
+.ramadan-select {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    background: var(--accent-color);
+    color: var(--text-white);
+    border: 1px solid rgba(255, 211, 105, 0.2);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.ramadan-select:hover {
+    border-color: rgba(255, 211, 105, 0.4);
+}
+
+.ramadan-select:focus {
+    outline: none;
+    border-color: #ffd369;
+    box-shadow: 0 0 0 2px rgba(255, 211, 105, 0.2);
+}
+
+.ramadan-list {
+    max-height: 320px;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+
+.ramadan-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.ramadan-list::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 3px;
+}
+
+.ramadan-list::-webkit-scrollbar-thumb {
+    background: #ffd369;
+    border-radius: 3px;
+}
+
+.ramadan-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: rgba(42, 42, 42, 0.6);
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    transition: all 0.25s ease;
+    border: 1px solid transparent;
+}
+
+.ramadan-item:hover {
+    background: rgba(58, 58, 58, 0.8);
+    border-color: rgba(255, 211, 105, 0.1);
+}
+
+.ramadan-item-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.ramadan-day-num {
+    font-weight: 700;
+    color: #ffd369;
+    font-size: 0.95rem;
+}
+
+.ramadan-times {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #b8b8b8;
+    font-size: 0.85rem;
+}
+
+.time-divider {
+    color: #555;
+    font-weight: 300;
+}
+
+.ramadan-item .ramadan-date {
+    font-size: 0.8rem;
+    color: #888;
+    white-space: nowrap;
+}
+
+.active-ramadan {
+    background: linear-gradient(135deg, rgba(255, 211, 105, 0.25) 0%, rgba(255, 179, 71, 0.2) 100%) !important;
+    border-color: rgba(255, 211, 105, 0.4) !important;
+    box-shadow: 0 0 16px rgba(255, 211, 105, 0.15);
+}
+
+.active-ramadan .ramadan-day-num {
+    color: #ffd369;
+}
+
+.active-ramadan .ramadan-times {
+    color: var(--text-white);
+}
+
+.active-ramadan .ramadan-date {
+    color: rgba(255, 211, 105, 0.9);
+}
+
+/* ===== RAMAZON DUOLARI ===== */
+.ramadan-duas {
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 211, 105, 0.2);
+}
+
+.duas-title {
+    font-size: 1.1rem;
+    color: #ffd369;
+    margin-bottom: 1.25rem;
+    text-align: center;
+}
+
+.dua-block {
+    background: rgba(42, 42, 42, 0.5);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 3px solid rgba(255, 211, 105, 0.5);
+}
+
+.dua-block h4 {
+    font-size: 0.95rem;
+    color: #ffd369;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.dua-arabic {
+    font-family: 'Amiri', 'Traditional Arabic', serif;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #f5f5f5;
+    margin-bottom: 0.6rem;
+    direction: rtl;
+}
+
+.dua-translit {
+    font-size: 0.9rem;
+    color: #a8a8a8;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.dua-meaning {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.dua-block.dua-iftorlik-2 h4 {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .page-wrapper {
+        padding: 0 1rem;
+    }
+    .ramadan-section {
+        padding: 1.25rem;
+    }
+    .ramadan-region-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .ramadan-region-form {
+        max-width: 100%;
+    }
+}
